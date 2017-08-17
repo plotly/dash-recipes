@@ -8,6 +8,7 @@ def serve_layout():
     return html.Div('hlo world')
 
 app.layout = serve_layout
+app.server.secret_key='secret'
 
 if __name__ == '__main__':
     app.run_server(debug=False)
