@@ -20,7 +20,7 @@ app.layout = html.Div([
     Output('output', 'children'),
     [Input('d', 'value')])
 def update_outout(value):
-    print(flask.request.cookies)
+    print((flask.request.cookies))
     return value
 
 if __name__ == '__main__':

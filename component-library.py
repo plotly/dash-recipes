@@ -13,7 +13,7 @@ def layout(id):
         dcc.Dropdown(
             options=[
                 {'label': 'New York City', 'value': 'NYC'},
-                {'label': u'Montréal', 'value': 'MTL'},
+                {'label': 'Montréal', 'value': 'MTL'},
                 {'label': 'San Francisco', 'value': 'SF'}
             ],
             value='MTL',
@@ -24,7 +24,7 @@ def layout(id):
         dcc.Dropdown(
             options=[
                 {'label': 'New York City', 'value': 'NYC'},
-                {'label': u'Montréal', 'value': 'MTL'},
+                {'label': 'Montréal', 'value': 'MTL'},
                 {'label': 'San Francisco', 'value': 'SF'}
             ],
             value=['MTL', 'SF'],
@@ -36,7 +36,7 @@ def layout(id):
         dcc.RadioItems(
             options=[
                 {'label': 'New York City', 'value': 'NYC'},
-                {'label': u'Montréal', 'value': 'MTL'},
+                {'label': 'Montréal', 'value': 'MTL'},
                 {'label': 'San Francisco', 'value': 'SF'}
             ],
             value='MTL',
@@ -47,7 +47,7 @@ def layout(id):
         dcc.Checklist(
             options=[
                 {'label': 'New York City', 'value': 'NYC'},
-                {'label': u'Montréal', 'value': 'MTL'},
+                {'label': 'Montréal', 'value': 'MTL'},
                 {'label': 'San Francisco', 'value': 'SF'}
             ],
             values=['MTL', 'SF'],
@@ -114,7 +114,7 @@ app.layout = html.Div([
 ])
 
 INPUTS = [
-    Input(id_, 'value') for id_ in app.layout.keys()
+    Input(id_, 'value') for id_ in list(app.layout.keys())
     if 'controlled' in id_ and 'checkboxes' not in id_]
 INPUTS.append(Input('controlled-checkboxes', 'values'))
 

@@ -32,7 +32,7 @@ app.layout = html.Div([
     dash.dependencies.Output('output', 'children'),
     [dash.dependencies.Input('input', 'value')])
 def update_output(value):
-    return json.dumps(range(N))
+    return json.dumps(list(range(N)))
 
 if __name__ == '__main__':
     app.run_server(debug=True)

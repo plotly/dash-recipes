@@ -119,7 +119,7 @@ pages = {
 def display_content(pathname):
     if pathname is None:
         return html.Div()
-    matched = [c for c in pages.keys()
+    matched = [c for c in list(pages.keys())
                if pages[c]['url'] == pathname]
 
     if matched and matched[0] == 'example':

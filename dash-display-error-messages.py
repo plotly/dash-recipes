@@ -28,7 +28,7 @@ app.scripts.append_script({
 
 @app.server.route('/static/<filename>.js')
 def serve_script(filename):
-    print('serving {}'.format(filename))
+    print(('serving {}'.format(filename)))
     if filename not in ['dash-error-message-display']:
         raise Exception('"{}" is excluded from the allowed static files'.format(filename))
     return flask.send_from_directory(os.getcwd(), '{}.js'.format(filename))

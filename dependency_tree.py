@@ -38,7 +38,7 @@ def make_graph(xindex, xmin, xmax):
     npt = 20
     xgrid = np.zeros((npt,2))
     xgrid[:,int(xindex)] = np.linspace(int(xmin), int(xmax), npt)
-    print 'Calling func!'
+    print('Calling func!')
     f = func(xgrid)
     return Figure(data=[Scatter(x=xgrid[:,int(xindex)], y=f, mode='markers+lines')])
 

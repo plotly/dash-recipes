@@ -63,7 +63,7 @@ def build_data(contract_name, stream): # one stream only
 	#t0 = datetime.datetime.now() + datetime.timedelta(year=-1)
 	month_list = sorted([z['month'] for z in stream['monthList']])
 	month_list = [datetime.datetime.strptime(month, '%Y-%m-%d') for month in month_list]
-	print month_list
+	print(month_list)
 
 	min_month = min(month_list)
 	max_month = max(month_list)
@@ -77,10 +77,10 @@ def build_data(contract_name, stream): # one stream only
 	length = len(month_list)
 
 
-	print "////////////////////"
-	print month_list
-	print min_month, "===", max_month
-	print "////////////////////"
+	print("////////////////////")
+	print(month_list)
+	print((min_month, "===", max_month))
+	print("////////////////////")
 
 	#for i in range(0, length-1):
 	#start = month_list[i]
@@ -109,12 +109,12 @@ def plot_bar(data):
 
 
 
-example_stream={'status': 'active', 'numberOfTransactions': 2, 'bookingTypes': [u''], 'amountPerMonth': 3987.5, 'coeffOfVariation': 0.0, 'firstPayment': '2017-04-27', 'confidence': 1.0, 'groupKey': u'', 'accountTypes': [u'Giro account'], 'transactionsPerMonth': 1.0, 'monthList': [{'transactions': [{'partnerName': u'', 'uid': 99999999, 'amount': 3987.5, 'bookingType': u'', 'subclf': '1_1', 'bookingDate': '27-04-2017', 'partnerAccountIBAN': u''}], 'month': '2017-04-01'}, {'transactions': [{'partnerName': u'', 'uid': 111.0, 'amount': 3987.5, 'bookingType': u'', 'subclf': '1_1', 'bookingDate': '29-05-2017', 'partnerAccountIBAN': u''}], 'month': '2017-05-01'}], 'partnerName': u'', 'highestAmount': 3987.5, 'numberOfTransactionPerMonthWithTransaction': 1.0, 'overallAvailableMonths': 2, 'windowSize': '1M', 'lastPayment': '2017-05-29', 'nrMonthsWithTransaction': 2, 'numberOfMonths': 2, 'groupKeyType': 'partnerName', 'lowestAmount': 3987.5, 'nrMonthsWithoutTransaction': 0, 'amount': 3987.5, 'meanAmount': 3987.5, 'medianAmount': 3987.5, 'subclasses': ['1_1', '1_2'], 'missedMonthsSinceLatestTransaction': 0}
+example_stream={'status': 'active', 'numberOfTransactions': 2, 'bookingTypes': [''], 'amountPerMonth': 3987.5, 'coeffOfVariation': 0.0, 'firstPayment': '2017-04-27', 'confidence': 1.0, 'groupKey': '', 'accountTypes': ['Giro account'], 'transactionsPerMonth': 1.0, 'monthList': [{'transactions': [{'partnerName': '', 'uid': 99999999, 'amount': 3987.5, 'bookingType': '', 'subclf': '1_1', 'bookingDate': '27-04-2017', 'partnerAccountIBAN': ''}], 'month': '2017-04-01'}, {'transactions': [{'partnerName': '', 'uid': 111.0, 'amount': 3987.5, 'bookingType': '', 'subclf': '1_1', 'bookingDate': '29-05-2017', 'partnerAccountIBAN': ''}], 'month': '2017-05-01'}], 'partnerName': '', 'highestAmount': 3987.5, 'numberOfTransactionPerMonthWithTransaction': 1.0, 'overallAvailableMonths': 2, 'windowSize': '1M', 'lastPayment': '2017-05-29', 'nrMonthsWithTransaction': 2, 'numberOfMonths': 2, 'groupKeyType': 'partnerName', 'lowestAmount': 3987.5, 'nrMonthsWithoutTransaction': 0, 'amount': 3987.5, 'meanAmount': 3987.5, 'medianAmount': 3987.5, 'subclasses': ['1_1', '1_2'], 'missedMonthsSinceLatestTransaction': 0}
 
 
 
 if __name__ == '__main__':
 	data = build_data('S', example_stream)
 	plot_bar(data)
-	print data
+	print(data)
 	app.run_server(debug=True)
