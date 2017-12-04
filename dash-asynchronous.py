@@ -6,6 +6,7 @@ import dash_html_components as html
 import datetime
 import time
 
+
 class Semaphore:
     def __init__(self, filename='semaphore.txt'):
         self.filename = filename
@@ -23,7 +24,9 @@ class Semaphore:
     def is_locked(self):
         return open(self.filename, 'r').read() == 'working'
 
+
 semaphore = Semaphore()
+
 
 def long_process():
     if semaphore.is_locked():
@@ -33,25 +36,29 @@ def long_process():
     semaphore.unlock()
     return datetime.datetime.now()
 
+
 app = dash.Dash()
+server = app.server
+
 
 def layout():
     return html.Div([
         html.Button('Run Process', id='button'),
         dcc.Interval(id='interval', interval=500),
-        dcc.RadioItems(
-            id='lock',
-            options=[{'label': i, 'value': i} for i in ['Running...', 'Free']]),
-        html.Div(id='output')
+        html.Div(id='lock'),
+        html.Div(id='output'),
     ])
+
 
 app.layout = layout
 
+
 @app.callback(
-    Output('lock', 'value'),
+    Output('lock', 'children'),
     events=[Event('interval', 'interval')])
 def display_status():
     return 'Running...' if semaphore.is_locked() else 'Free'
+
 
 @app.callback(
     Output('output', 'children'),
@@ -59,7 +66,6 @@ def display_status():
 def run_process():
     return 'Finished at {}'.format(long_process())
 
-app.scripts.config.serve_locally = True
 
 if __name__ == '__main__':
     app.run_server(debug=True, processes=5)

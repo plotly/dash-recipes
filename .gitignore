@@ -1,2 +1,4 @@
 vv
 *.pyc
+cache/
+.ropeproject

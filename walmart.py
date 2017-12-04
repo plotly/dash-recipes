@@ -8,6 +8,8 @@ df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/1962_
 
 app = dash.Dash()
 app.scripts.config.serve_locally=True
+app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/dZVMbK.css"})
+
 
 app.layout = html.Div([
     html.H1('Dash App'),
@@ -51,8 +53,8 @@ def update_graph(new_value):
             'lon': dff.LON,
             'type': 'scattermapbox',
         }],
-	'layout': {'mapbox': {'accesstoken': 'pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiY2oyY2M4YW55MDF1YjMzbzhmemIzb290NiJ9.sT6pncHLXLgytVEj21q43A'}}
+        'layout': {'mapbox': {'accesstoken': 'pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiY2oyY2M4YW55MDF1YjMzbzhmemIzb290NiJ9.sT6pncHLXLgytVEj21q43A'}}
     }
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=True)
