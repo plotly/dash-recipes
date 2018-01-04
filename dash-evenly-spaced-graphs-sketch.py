@@ -13,4 +13,5 @@ app.layout = html.Div([
 
 @app.callback(Output('div-container', 'children'), [...])
 def update_graphs(...):
+    figures = ... # your own function that generates the figures
     return EvenlySpacedGraphs(figures)
