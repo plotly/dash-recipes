@@ -14,9 +14,10 @@ def serve_layout():
         html.Div(id='output-1'),
         html.Div(id='output-2'),
         dcc.Dropdown(
-            id='input',
-            options=[{'label': i, 'value': i} for i in ['a', 'b']]
-        )
+            id='input', options=[{
+                'label': i,
+                'value': i
+            } for i in ['a', 'b']])
     ])
 
 

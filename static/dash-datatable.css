@@ -1,0 +1,100 @@
+/* Core CSS
+ * Taken from https://github.com/adazzle/react-data-grid/blob/75d1348134ea073ca04a5e634863cd5be062fcdf/themes/react-data-grid-core.css
+ */
+.react-grid-Main {
+  background-color: #ffffff;
+  color: inherit;
+  padding: 0px;
+  outline: 1px solid #e7eaec;
+}
+
+.react-grid-Grid {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.react-grid-Canvas {
+  background-color: #ffffff;
+}
+
+/* Cell CSS
+ * Taken from https://github.com/adazzle/react-data-grid/blob/75d1348134ea073ca04a5e634863cd5be062fcdf/themes/react-data-grid-cell.css
+ */
+
+.react-grid-Cell {
+  background-color: green;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Header CSS
+ * Taken from https://github.com/adazzle/react-data-grid/blob/75d1348134ea073ca04a5e634863cd5be062fcdf/themes/react-data-grid-header.css
+ */
+
+ .react-grid-Header {
+   box-shadow: 0px 0px 4px 0px #dddddd;
+   background: #f9f9f9;
+ }
+
+ .react-grid-HeaderCell {
+  background: #f9f9f9;
+  padding: 8px;
+  font-weight: bold;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Row CSS
+ * Taken from https://github.com/adazzle/react-data-grid/blob/75d1348134ea073ca04a5e634863cd5be062fcdf/themes/react-data-grid-row.css
+ */
+.react-grid-Row:hover .react-grid-Cell,
+.react-grid-Row.row-context-menu .react-grid-Cell {
+  background-color: #f9f9f9;
+}
+
+.react-grid-Row.row-selected{
+ background-color: #DBECFA;
+}
+
+.react-grid-Row .row-selected{
+ background-color: #DBECFA;
+}
+
+/* Toolbar CSS
+ * Taken from https://github.com/adazzle/react-data-grid/blob/75d1348134ea073ca04a5e634863cd5be062fcdf/themes/react-data-grid-toolbar.css
+ */
+.react-grid-Toolbar {
+  background-color: #ffffff;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 1px 1px 1px;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 14px 15px 7px;
+  height: 48px;
+}
+.react-grid-Toolbar .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  color: inherit;
+  background: white;
+  border: 1px solid #e7eaec;
+}
+.react-grid-Toolbar .btn:hover {
+  color: inherit;
+  border: 1px solid #d2d2d2;
+}

@@ -1,0 +1,52 @@
+.dark-table .react-grid-Main {
+  background-color: rgb(40, 40, 40);
+  color: rgb(230, 230, 230);
+  outline: 1px solid rgb(200, 200, 200);
+}
+
+.dark-table .react-grid-Grid {
+  background-color: rgb(40, 40, 40);
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.dark-table .react-grid-Canvas {
+  background-color: rgb(40, 40, 40);
+}
+
+.dark-table .react-grid-Cell {
+  background-color: rgb(40, 40, 40);
+  border-right: 1px solid rgb(200, 200, 200);
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.dark-table .react-grid-Header {
+  background: rgb(20, 20, 20);
+}
+
+.dark-table .react-grid-HeaderCell {
+ background: rgb(20, 20, 20);
+ border-right: 1px solid rgb(200, 200, 200);
+ border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.dark-table .react-grid-Row:hover .react-grid-Cell,
+.dark-table .react-grid-Row.row-context-menu .react-grid-Cell {
+  background-color: rgb(60, 60, 60);
+}
+
+/* light-table css */
+
+.light-table .react-grid-Main {
+  background-color: #ffffff;
+  color: inherit;
+  outline: 1px solid #e7eaec;
+}
+
+.light-table .react-grid-Grid {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.light-table .react-grid-Canvas {
+  background-color: #ffffff;
+}

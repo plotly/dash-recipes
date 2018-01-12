@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-grid-layout": "^0.16.2"
+  }
+}
