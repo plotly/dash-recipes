@@ -7,7 +7,8 @@ app = dash.Dash()
 
 app.layout = html.Div([
     html.Button(id='button', n_clicks=0, children='Add graph'),
-    html.Div(id='container')
+    html.Div(id='container'),
+    html.Div(dcc.Graph(id='empty', figure={'data': []}), style={'display': 'none'})
 ])
 
 
