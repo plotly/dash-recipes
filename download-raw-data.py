@@ -69,7 +69,7 @@ def update_table(filter_value):
 def update_download_link(filter_value):
     dff = filter_data(filter_value)
     csv_string = dff.to_csv(index=False, encoding='utf-8')
-    csv_string = "data:text/csv;charset=utf-8," + quote(csv_string)
+    csv_string = "data:text/csv;charset=utf-8,%EF%BB%BF" + quote(csv_string)
     return csv_string
 
 
