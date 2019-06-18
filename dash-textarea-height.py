@@ -11,7 +11,7 @@ app.layout = html.Div(
                 id='input_query',
                 placeholder='Enter/Review Query...',
                 rows=50,
-                style={'width': '100%'}
+                style={'width': '100%', 'height': 'auto'}
             ),
         ]),
     ])
