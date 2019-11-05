@@ -9,10 +9,12 @@ df = pd.DataFrame({
 
 def Table(dataframe):
     rows = []
+    cols = dataframe.columns
     for i in range(len(dataframe)):
         row = []
-        for col in dataframe.columns:
-            value = dataframe.iloc[i][col]
+        for j in range(len(cols)):
+            col = cols[j]
+            value = dataframe.iat[i,j]
             # update this depending on which
             # columns you want to show links for
             # and what you want those links to be
