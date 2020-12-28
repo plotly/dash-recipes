@@ -7,7 +7,7 @@ app = dash.Dash()
 encoded_image = base64.b64encode(open('dash_app.png', 'rb').read())
 
 app.layout = html.Div([
-    html.Img(src='data:image/png;base64,{}'.format(encoded_image))
+    html.Img(src=f'data:image/png;base64,{encoded_image}')
 ])
 
 if __name__ == '__main__':
