@@ -14,7 +14,7 @@ vertical = False
 if not vertical:
     app.layout = html.Div([
         dcc.Tabs(
-            tabs=[
+            children=[
                 {'label': 'Market Value', 'value': 1},
                 {'label': 'Usage Over Time', 'value': 2},
                 {'label': 'Predictions', 'value': 3},
@@ -43,7 +43,7 @@ else:
     app.layout = html.Div([
         html.Div(
             dcc.Tabs(
-                tabs=[
+                children=[
                     {'label': 'Market Value', 'value': 1},
                     {'label': 'Usage Over Time', 'value': 2},
                     {'label': 'Predictions', 'value': 3},
