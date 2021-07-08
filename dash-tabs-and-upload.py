@@ -14,13 +14,13 @@ vertical = False
 if not vertical:
     app.layout = html.Div([
         dcc.Tabs(
-            tabs=[
-                {'label': 'Market Value', 'value': 1},
-                {'label': 'Usage Over Time', 'value': 2},
-                {'label': 'Predictions', 'value': 3},
-                {'label': 'Target Pricing', 'value': 4},
+            children=[
+                dcc.Tab(label='Market Value', value="1"),
+                dcc.Tab(label='Usage Over Time', value="2"),
+                dcc.Tab(label='Predictions', value="3"),
+                dcc.Tab(label='Target Pricing', value="4"),
             ],
-            value=3,
+            value="3",
             id='tabs',
             vertical=vertical
         ),
@@ -43,13 +43,13 @@ else:
     app.layout = html.Div([
         html.Div(
             dcc.Tabs(
-                tabs=[
-                    {'label': 'Market Value', 'value': 1},
-                    {'label': 'Usage Over Time', 'value': 2},
-                    {'label': 'Predictions', 'value': 3},
-                    {'label': 'Target Pricing', 'value': 4},
+                children=[
+                    dcc.Tab(label='Market Value', value="1"),
+                    dcc.Tab(label='Usage Over Time', value="2"),
+                    dcc.Tab(label='Predictions', value="3"),
+                    dcc.Tab(label='Target Pricing', value="4"),
                 ],
-                value=3,
+                value="3",
                 id='tabs',
                 vertical=vertical,
                 style={
